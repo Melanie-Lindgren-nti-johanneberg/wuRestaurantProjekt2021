@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(../img/antique_book_cover.otf);
+}
+* > #container {
+    display: grid;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    color: black;
+    background-image: url("/img/restaurang_mat.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 80px 0px 500px 488px 50px;
+    grid-template-areas:
+    'hd hd hd hd hd'
+    'na na na na na'
+    'ma ma ma ma ma'
+    'ar ar ar fi as'
+    'ft ft ft ft ft'
+    ;
+}
+header {
+    grid-area: hd;
+    background: rgb(163, 114, 114);
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: myFirstFont;
+    font-size: 30px;
+}
+#navbar {
+    grid-area: na;
+    background-color: #333;
+    background: rgb(136, 128, 117);
+    height: 40px;
+    max-width: 100%;
+    opacity: 0.95;
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+#navbar a {
+    display: flex;
+    align-items: center;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+    height: 40px;
+}
+#navbar a p {
+    flex: 1;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.lista > li {
+    flex: 1;
+    float: left;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: chartreuse;
+}
+main {
+    grid-area: ma;
+    display: flex;
+    font-family: serif, fantasy;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: rgb(160, 148, 150);
+}
+article {
+    grid-area: ar;
+    background: rgba(250, 235, 215, 0.940);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 120px;
+    line-height: 170%;
+    font-size: 20px;
+}
+.dagens {
+    margin-bottom: 30px;
+}
+figure {
+    grid-area: fi;
+    background: rgba(250, 235, 215, 0.940);
+    display: flex;
+    align-items: center;
+}
+.soup_of_the_day{
+    height: 450px;
+    width: auto;
+    padding-right: 30px;
+}
+aside {
+    grid-area: as;
+    background: gray;
+}
+.aside_lista {
+    background: honeydew;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.oppettider_lista {
+    list-style-type: none;
+    padding-right: 15%;
+    line-height: 170%;
+}
+footer {
+    grid-area: ft;
+    background: antiquewhite;
+}
